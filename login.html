@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | De Yaya Pa' Ti</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #FFF8F0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            padding: 25px 5%;
+        }
+
+        .nombre {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3D261C;
+        }
+
+        .nombre span {
+            color: #F86700;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 30px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 35px;
+            background-color: white;
+            border: 1px solid #FAD9C5;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(61, 38, 28, 0.08);
+        }
+
+        .corazon {
+            background-color: #FFF0DF;
+            color: #F86700;
+            font-size: 2rem;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            text-align: center;
+            line-height: 55px;
+        }
+
+        .titulo {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            color: #3D261C;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            font-size: 0.9rem;
+            color: #795541;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            font-size: 0.9rem;
+            color: #3D261C;
+            margin-bottom: 8px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #D9C4B5;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        form input:focus {
+            border-color: #F86700;
+        }
+
+        .btn {
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            background-color: #F86700;
+            color: #3D261C;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #FFAC00;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .switch {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #795541;
+            margin-top: 20px;
+        }
+
+        .switch a {
+            color: #C44B00;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .switch a:hover {
+            text-decoration: underline;
+        }
+
+        #mensaje {
+            color: #B42318;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #795541;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                text-align: center;
+            }
+
+            .nombre {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 25px;
+            }
+
+            .titulo {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="nombre">De Yaya <span>Pa' Ti</span></h1>
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="corazon">♡</div>
+
+            <h2 class="titulo">¡Qué lindo verte!</h2>
+
+            <p class="descripcion">
+                Inicia sesión y comienza a crear.
+            </p>
+
+            <section class="formulario-iniciosesion">
+
+                <form id="formulario-sesion">
+
+                    <label for="login-email">Correo electrónico</label>
+
+                    <input type="email"
+                           id="login-email"
+                           name="login-email"
+                           placeholder="correo@ejemplo.com"
+                           autocomplete="email"
+                           required>
+
+                    <label for="login-password">Contraseña</label>
+
+                    <input type="password"
+                           id="login-password"
+                           name="login-password"
+                           placeholder="Ingresa tu contraseña"
+                           autocomplete="current-password"
+                           required>
+
+                    <button type="submit" class="btn" id="btn-login">
+                        Iniciar sesión
+                        <a href="../dashboard/dashboard.html" target="_blank" rel="noopener noreferrer"></a>
+                    </button>
+
+                    <p id="mensaje" role="alert"></p>
+
+                </form>
+
+                <div class="switch">
+                    <p>
+                        ¿No tienes una cuenta?
+                        <a href="../signup/signup.html">Regístrate aquí</a>
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; YayaPaTi 2026. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="login.js"></script>
+
+</body>
+</html>
