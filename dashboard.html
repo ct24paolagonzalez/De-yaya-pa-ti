@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | De Yaya Pa' Ti</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #FFF8F0;
+            font-family: 'Poppins', sans-serif;
+            color: #3D261C;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 5%;
+            background-color: #F86700;
+        }
+
+        .nombre {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3D261C;
+        }
+
+        .nombre span {
+            color: #FFFC60;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #3D261C;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #FFFC60;
+        }
+
+        .cerrar-sesion {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #FFAC00;
+            color: #3D261C;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .cerrar-sesion:hover {
+            background-color: #FFFC60;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .bienvenida {
+            background-color: #FFF0CE;
+            padding: 50px 8%;
+            border-bottom: 5px solid #FFAC00;
+        }
+
+        #usuario {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #795541;
+        }
+
+        .nombre-proyecto {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: #C44B00;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #3D261C;
+        }
+
+        .bienvenida p {
+            font-size: 1rem;
+            color: #795541;
+        }
+
+        .catalogo {
+            width: 85%;
+            margin: 50px auto;
+        }
+
+        .titulo {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            border-bottom: 4px solid #F86700;
+            padding-bottom: 10px;
+            width: fit-content;
+        }
+
+        .descripcion {
+            color: #795541;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .productos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            width: 33.33%;
+            background-color: white;
+            border-radius: 20px;
+            border: 2px solid #FAD9C5;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(61, 38, 28, 0.08);
+        }
+
+        .card:hover {
+            border-color: #FFAC00;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .informacion {
+            padding: 25px;
+        }
+
+        .informacion h3 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.8rem;
+            color: #C44B00;
+            margin-bottom: 15px;
+        }
+
+        .informacion p {
+            font-size: 0.9rem;
+            color: #795541;
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            font-size: 1.8rem;
+            color: #C44B00;
+            font-weight: 600;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #FFF0CE;
+            border-radius: 10px;
+        }
+
+        .nosotros {
+            background-color: #FFAC00;
+            padding: 45px 8%;
+            text-align: center;
+        }
+
+        .nosotros h2 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .nosotros p {
+            max-width: 750px;
+            margin: auto;
+            color: #3D261C;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #3D261C;
+            color: #FFF8F0;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nombre {
+                font-size: 2rem;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .bienvenida {
+                padding: 35px 7%;
+            }
+
+            .nombre-proyecto {
+                font-size: 3rem;
+            }
+
+            .subtitulo {
+                font-size: 2rem;
+            }
+
+            .productos {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .card img {
+                height: 280px;
+            }
+
+            .catalogo {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="nombre">De Yaya <span>Pa' Ti</span></h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#nosotros">Nosotros</a>
+
+            <button class="cerrar-sesion" id="cerrar-sesion">
+                Cerrar sesión
+            </button>
+        </nav>
+
+    </header>
+
+    <main id="contenido" hidden>
+
+        <section class="bienvenida" id="inicio">
+
+            <p id="usuario">¡Bienvenido!</p>
+
+            <h2 class="nombre-proyecto">De Yaya Pa' Ti</h2>
+
+            <h3 class="subtitulo">
+                Pequeños detalles, grandes historias.
+            </h3>
+
+            <p>
+                Descubre creaciones únicas hechas a mano por nuestras
+                artesanas y encuentra la inspiración para crear algo
+                especialmente para ti.
+            </p>
+
+        </section>
+
+        <section class="catalogo" id="catalogo">
+
+            <h2 class="titulo">Nuestras creaciones</h2>
+
+            <p class="descripcion">
+                Creatividad, dedicación y amor en cada puntada.
+            </p>
+
+            <div class="productos">
+
+                <div class="card">
+
+                    <img src="snoopy.jpeg" alt="Bordado de Snoopy">
+
+                    <div class="informacion">
+
+                        <h3>Snoopy</h3>
+
+                        <p>
+                            <strong>Autora:</strong> Paola González
+                        </p>
+
+                        <p>
+                            <strong>Tiempo de elaboración:</strong> 3 horas
+                        </p>
+
+                        <div class="precio">$15.00</div>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="ari.jpeg" alt="Bordado Ari">
+
+                    <div class="informacion">
+
+                        <h3>Bordado Ari</h3>
+
+                        <p>
+                            <strong>Autora:</strong> Nellys Quiros
+                        </p>
+
+                        <p>
+                            <strong>Tiempo de elaboración:</strong> 5 horas
+                        </p>
+
+                        <div class="precio">$20.00</div>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="navidad.jpeg" alt="Bordado de Navidad">
+
+                    <div class="informacion">
+
+                        <h3>Navidad</h3>
+
+                        <p>
+                            <strong>Autora:</strong> Nellys Quiros
+                        </p>
+
+                        <p>
+                            <strong>Tiempo de elaboración:</strong> 4 horas
+                        </p>
+
+                        <div class="precio">$18.00</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="nosotros" id="nosotros">
+
+            <h2>Detrás de cada puntada</h2>
+
+            <p>
+                De Yaya Pa' Ti nace con el propósito de dar
+                visibilidad al talento artesanal panameño,
+                conectando personas con creaciones hechas a mano.
+                Queremos que cada pieza sea especial y que el
+                trabajo de nuestras artesanas sea reconocido
+                y valorado.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; YayaPaTi 2026. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="homepage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>De Yaya Pa' Ti</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #FFF8F0;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        header {
+            width: 100%;
+            padding: 25px 5%;
+            border-bottom: 1px solid #FAD9C5;
+        }
+
+        .nombre {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3D261C;
+        }
+
+        .nombre span {
+            color: #F86700;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+            gap: 40px;
+            padding: 40px 0;
+            flex: 1;
+        }
+
+        .container-card {
+            width: 50%;
+            padding: 40px;
+            text-align: left;
+        }
+
+        .welcome-title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #3D261C;
+        }
+
+        .welcome-subtitle {
+            font-size: 4rem;
+            font-weight: 700;
+            font-style: italic;
+            color: #F86700;
+            margin-bottom: 25px;
+        }
+
+        .welcome-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: #795541;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .welcome-button {
+            background-color: #F86700;
+            color: #3D261C;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .welcome-button:hover {
+            background-color: #FFAC00;
+        }
+
+        .imagenes {
+            display: flex;
+            width: 50%;
+            gap: 15px;
+        }
+
+        .imagen-principal {
+            width: 50%;
+        }
+
+        .imagen-principal img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .imagenes-secundarias {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            gap: 15px;
+        }
+
+        .imagenes-secundarias img {
+            width: 100%;
+            height: 242.5px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+
+        footer {
+            background-color: #FAD9C5;
+            color: #3D261C;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                text-align: center;
+            }
+
+            .nombre {
+                font-size: 2rem;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 30px 0;
+            }
+
+            .container-card {
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .welcome-title,
+            .welcome-subtitle {
+                font-size: 3rem;
+            }
+
+            .button-container {
+                justify-content: center;
+            }
+
+            .imagenes {
+                width: 100%;
+            }
+
+            .imagen-principal img {
+                height: 350px;
+            }
+
+            .imagenes-secundarias img {
+                height: 167.5px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="nombre">De Yaya <span>Pa' Ti</span></h1>
+    </header>
+
+    <main class="container">
+
+        <div class="container-card">
+
+            <h2 class="welcome-title">
+                Ideas tuyas,
+            </h2>
+
+            <h2 class="welcome-subtitle">
+                creaciones únicas.
+            </h2>
+
+            <p class="welcome-text">
+                Bienvenido a <strong>De Yaya Pa' Ti</strong>,
+                un espacio donde tu imaginación se encuentra
+                con el talento artesanal panameño.
+                Descubre bordados únicos, conecta con artesanos
+                locales y convierte tus ideas en creaciones
+                hechas especialmente para ti.
+            </p>
+
+            <div class="button-container">
+                <a href="../login/login.html" class="welcome-button">
+    Comienza a crear &rarr;
+</a>
+            </div>
+
+        </div>
+
+        <div class="imagenes">
+
+            <div class="imagen-principal">
+                <img src="tulip.jpg" alt="Bordado de tulipanes">
+            </div>
+
+            <div class="imagenes-secundarias">
+                <img src="snoopy.jpeg" alt="Bordado de Snoopy">
+                <img src="flor.jpg" alt="Bordado de flores">
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; YayaPaTi 2026. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
